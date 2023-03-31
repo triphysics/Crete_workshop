@@ -1,4 +1,4 @@
-Crete_workshop
+
 These notebooks and file are for the workshop at University of Crete.
 
 The 1st notebook describes phonon calculation in monolayer MoS2 using phonopy (https://phonopy.github.io/phonopy/) and enforcing the necessary symmetry constraints wit hihpive (https://hiphive.materialsmodeling.org/).
