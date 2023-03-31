@@ -1,0 +1,21 @@
+#!/bin/bash
+  
+#SBATCH --nodes=1               # max 44 nodes within partition edge1
+#SBATCH --ntasks-per-node=64    # number of MPI processes per node
+#SBATCH --cpus-per-task=1       # number of OpenMP threads per MPI proces
+#SBATCH --job-name=ZZ-0
+#SBATCH --time=01:30:00
+
+module load vaughan/2020a
+module load VASP/5.4.4-intel-2020a-Wannier90-2.1.0
+
+for k in `ls POSCAR-*|sed s/POSCAR-//`
+do
+mkdir $k
+cp INCAR KPOINTS POTCAR POSCAR-$k $k
+cd $k
+mv POSCAR-$k POSCAR
+mpirun vasp_gam >>log
+mv ../POSCAR-$k .
+cd ../
+done
