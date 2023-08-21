@@ -1,5 +1,4 @@
-
-These notebooks and file are for the workshop at University of Crete.
+These notebooks and file are for the workshop at University of Crete organized by me in April 2023. The focus of workshop is to teach about phonon calculations in 2D materials and use the phonon frequencies  for calculation of Huang–Rhys (HR) factor and photoluminescence spectra.
 
 The 1st notebook describes phonon calculation in monolayer MoS2 using phonopy (https://phonopy.github.io/phonopy/) and enforcing the necessary symmetry constraints with hihpive (https://hiphive.materialsmodeling.org/).
 
